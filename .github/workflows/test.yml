@@ -11,12 +11,14 @@ jobs:
   release:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         include:
           - os: ubuntu-latest
             name: MultiCouple-linux
           - os: windows-latest
             name: MultiCouple-Windows
+          - os: macos-latest
+            name: MultiCouple-Macos
 
     runs-on: ${{ matrix.os }}
 
